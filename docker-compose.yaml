@@ -17,6 +17,14 @@ services:
       - configs/postgres/.env
     volumes:
       - pgdata:/var/lib/postgresql
+  ingest:
+    image: chiaf1/iot-nonna-ingest:1
+    restart: unless-stopped
+    volumes:
+      - ./configs/ingest/config.yaml:./config.yaml
+    depends_on:
+      - mqtt
+      - pg_db
 volumes:
   mqtt-data:
   mqtt-log:
