@@ -25,6 +25,18 @@ services:
     depends_on:
       - mqtt
       - pg_db
+  core:
+    image: chiaf1/iot-nonna-core:1
+    restart: unless-stopped
+    ports:
+      - 3030:3030
+    volumes:
+      - ./configs/core/config.yaml:/app/config.yaml
+    depends_on:
+      - pg_db
+    environment:
+      - RUN_MIGRATIONS=true
+      - RUN_SEEDING=true
 volumes:
   mqtt-data:
   mqtt-log:
