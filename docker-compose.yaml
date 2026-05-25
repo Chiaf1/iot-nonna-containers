@@ -37,6 +37,15 @@ services:
     environment:
       - RUN_MIGRATIONS=true
       - RUN_SEEDING=true
+  frontend:
+    image: chiaf1/iot-nonna-frontend:1
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    depends_on:
+      - core
+    environment:
+      - API_URL=http://core:3030
 volumes:
   mqtt-data:
   mqtt-log:
