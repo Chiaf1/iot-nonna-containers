@@ -43,7 +43,7 @@ Una volta avviato, il frontend è raggiungibile su [http://localhost:3000](http:
 ### 1. Clona la repository
 
 ```bash
-git clone https://github.com/<tuo-utente>/iot-nonna-container.git
+git clone https://github.com/chiaf1/iot-nonna-container.git
 cd iot-nonna-container
 ```
 
