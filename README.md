@@ -42,6 +42,22 @@ Project repositories:
 
 ---
 
+## Screenshots
+
+### Dashboard
+
+![Dashboard with rooms and device status](docs/screenshots/dashboard.png)
+
+### Device detail
+
+![Device detail with sensor chart](docs/screenshots/device-detail.png)
+
+### Sensor type
+
+![Sensor type with column schema and value mapping](docs/screenshots/sensor-type.png)
+
+---
+
 ## Services
 
 | Service    | Image                            | Exposed port |
